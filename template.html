@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github Navigator</title>
+</head>
+<body>
+    <h1>{{search_term}}</h1>
+    {% if items|length > 0 %}
+        {% for item in items %}
+            <h2>{{ loop.index }}. {{ item.respository_name }}</h2>
+            <h3> Created {{ item.created_at }}</h3>
+            <a href="{{ item.owner_url }}"><img src="{{ item.avatar_url }}" alt="avatar" height="42" width="42"/></a>
+            {{ item.owner_login }}
+            <h3>LastCommit</h3>
+            {% if item.sha and item.commit_message and item.commit_author_name %}
+            {{ item.sha }} {{ item.commit_message }} {{ item.commit_author_name }}
+            {% else %}
+            <b style="color:red">No commit message</b>
+            {% endif %}
+            <hr/>
+        {% endfor %}
+    {% else %}
+        <h2 style="color: darkred">No repositories found matching this search query</h2>
+    {% endif %}
+</body>
+</html>
