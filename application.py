@@ -32,7 +32,7 @@ def fetch_commit(item):
     }
     # retrieve latest commit message
     commit_url = item.get('commits_url').replace('{/sha}', '')
-    commit_headers = {'username': 'styccs@gmail.com', 'password': '600ts1ll'}
+    commit_headers = {'username': os.getenv('GMAIL_USERNAME'), 'password': os.getenv('GMAIL_PASSWORD')}
     json_resp = requests.get(commit_url, headers=commit_headers)
     if json_resp.status_code == 200:
         commit_resp = json.loads(json_resp.content)
