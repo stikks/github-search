@@ -9,9 +9,11 @@ It then retrieves information on the latest commit for the 5 most recent reposit
 
 ## Bootstrapping Steps
 
-Attached in the zipped file are the following:
+Attached in this repository:
 > python application file (application.py)
+
 > html template file (template.html)
+
 > notes, explanation and bootstrapping steps (cover.txt)
 
 The application only has two external dependencies
@@ -20,13 +22,20 @@ The application only has two external dependencies
 
 To run application, do the following:
 ``` git clone https://github.com/stikks/github-search.git ```
+
 > change directory to decompressed folder task-github
+
 > run the command line command; 
 ``` source dependencies/bin/activate ``` 
+
 > to activate the virtual environment with the dependencies pre-installed
+
 > run 
+
 ```python application.py```
+
 > to start the application
+
 > open a browser and do GET request to e.g. http://localhost:9876/navigator?search_term=arrow
 
 
