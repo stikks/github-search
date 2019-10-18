@@ -12,7 +12,7 @@ Pillow>=3.3.2
 PyChart==1.39
 PyYAML==3.10
 Pygments==1.6
-Twisted==17.1.0
+Twisted==19.7.0
 Twisted-Core==13.2.0
 Twisted-Names==13.2.0
 Twisted-Web==13.2.0
